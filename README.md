@@ -1,47 +1,65 @@
-🚀 EmoLearn
+<h1 align="center">🚀 EmoLearn</h1>
+<p align="center">
+  <b>AI-Powered Emotion-Aware Learning Platform</b><br/>
+  Making education smarter, adaptive, and human-like
+</p>
 
-AI-Powered Emotion-Aware Learning Platform
+<p align="center">
+  <img src="https://img.shields.io/badge/React-Frontend-blue?logo=react"/>
+  <img src="https://img.shields.io/badge/Node.js-Backend-green?logo=node.js"/>
+  <img src="https://img.shields.io/badge/AI-OpenRouter-purple"/>
+  <img src="https://img.shields.io/badge/Status-Active-success"/>
+</p>
 
-📌 Overview
+---
 
-EmoLearn is an intelligent learning platform that enhances digital education by detecting student emotions and adapting teaching methods accordingly. It combines AI, NLP, and interactive chat-based learning to create a personalized and engaging learning experience.
+## 📌 Overview
 
-🎯 Key Features
-🤖 AI Tutor Chatbot
-Interactive chatbot that helps students learn concepts step-by-step.
-🧠 Emotion Detection
-Detects student emotions like confusion, frustration, motivation from input.
-🎯 Adaptive Learning
-Adjusts explanations based on the detected emotion.
-📚 Courses Module
-Explore and start learning different subjects.
-📊 Progress Dashboard
-Track learning progress, performance, and activity.
-🏆 Achievements System
-Gamified learning with badges and milestones.
-⚙️ Settings Page
-Customize learning preferences and AI behavior.
-🏗️ Tech Stack
-Frontend
-React.js
-Tailwind CSS
-Framer Motion
-Backend
-Node.js
-Express.js
-AI / NLP
-OpenRouter API (LLM Integration)
-Emotion Detection (Rule-based NLP)
-⚙️ How It Works
-User sends a message through the chat interface
-System detects emotion (confused / frustrated / motivated / neutral)
-A structured prompt is generated
-Prompt is sent to AI model via OpenRouter
-AI responds with an adaptive explanation
-Response is displayed in chat
-🧠 Emotion-Based Adaptation
-Emotion	System Behavior
-Frustrated	Simplifies explanation + encouragement
-Confused	Step-by-step clarification
-Motivated	Slightly advanced content
-Neutral	Normal explanation
+**EmoLearn** is an AI-driven learning platform that enhances digital education by detecting student emotions and adapting teaching methods in real time.
+
+Unlike traditional platforms, EmoLearn understands how a student feels — whether confused, frustrated, or motivated — and adjusts explanations accordingly through an intelligent AI tutor.
+
+---
+
+## ✨ Features
+
+### 🤖 AI Tutor Chat
+- Interactive chatbot for real-time learning  
+- Explains concepts step-by-step  
+- Acts like a personal tutor  
+
+### 🧠 Emotion Detection
+- Detects emotions from student input  
+- Supports: *Confused, Frustrated, Motivated, Neutral*  
+
+### 🎯 Adaptive Learning
+- Dynamically changes explanation style  
+- Simplifies or deepens content based on emotion  
+
+### 📚 Courses Page
+- Browse structured subjects  
+- Start learning instantly  
+
+### 📊 Progress Dashboard
+- Track learning progress  
+- View performance insights  
+
+### 🏆 Achievements
+- Unlock badges and milestones  
+- Gamified learning experience  
+
+### ⚙️ Settings
+- Customize learning style  
+- Control AI tutor behavior  
+
+---
+
+## 🧠 How It Works
+
+```mermaid
+flowchart LR
+A[User Input] --> B[Emotion Detection]
+B --> C[Prompt Builder]
+C --> D[AI Model (OpenRouter)]
+D --> E[Adaptive Response]
+E --> F[Chat Interface]
