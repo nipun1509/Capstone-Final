@@ -1,0 +1,54 @@
+modules = ["nodejs-24"]
+
+  [[artifacts]]
+  id = "artifacts/emolearn"
+
+  [[artifacts]]
+  id = "artifacts/api-server"
+
+  [[artifacts]]
+  id = "artifacts/mockup-sandbox"
+
+  [deployment]
+  router = "application"
+  deploymentTarget = "autoscale"
+  build = ["bash", "-c", "pnpm install && pnpm --filter @workspace/emolearn run build && pnpm --filter @workspace/api-server run build"]
+  run = ["node", "artifacts/api-server/dist/index.cjs"]
+
+  [workflows]
+  runButton = "Project"
+
+  [[workflows.workflow]]
+  name = "Project"
+  mode = "parallel"
+  author = "agent"
+
+  [[workflows.workflow.tasks]]
+  task = "workflow.run"
+  args = "Start application"
+
+  [[workflows.workflow]]
+  name = "Start application"
+  author = "agent"
+
+  [[workflows.workflow.tasks]]
+  task = "shell.exec"
+  args = "pnpm --filter @workspace/api-server run dev & pnpm --filter @workspace/emolearn run dev"
+  waitForPort = 25518
+
+  [workflows.workflow.metadata]
+  outputType = "webview"
+
+  [agent]
+  stack = "PNPM_WORKSPACE"
+expertMode = true
+
+  [postMerge]
+  path = "scripts/post-merge.sh"
+  timeoutMs = 20000
+
+  [userenv]
+
+  [userenv.shared]
+  OPENROUTER_API_KEY = "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"
+  

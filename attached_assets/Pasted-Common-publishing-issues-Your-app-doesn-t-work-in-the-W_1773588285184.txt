@@ -1,0 +1,31 @@
+Common publishing issues
+​
+Your app doesn’t work in the Workspace
+Before publishing, verify your app runs correctly. Select the Run button at the top of the Workspace. If Preview doesn’t display your app with a replit.dev URL, your code has an issue that needs fixing before you can publish.
+​
+Your program exits instead of running continuously
+Published apps expect your program to run indefinitely. If your program executes a function and exits, the platform restarts it automatically. Make sure your application starts a long-running process such as a web server.
+​
+Your server isn’t listening on 0.0.0.0
+If you’re running a web server, Deployments can automatically detect which port your server uses—but only if the server listens on 0.0.0.0. Listening on localhost or 127.0.0.1 doesn’t work.
+​
+Your application has errors
+Check the Logs tab at the top of the Deployments pane to view your application’s output. Look for stack traces or exceptions—these indicate code errors such as uninitialized variables or missing packages.
+​
+Your run or build commands are incorrect
+Common mistakes include typos, incorrect flags, or specifying the wrong file or directory. Double-check your commands in the Deployments pane and correct any issues.
+​
+Your Secrets aren’t configured for publishing
+Secrets you set in the Workspace don’t automatically carry over to your published app. Add all production Secrets and environment variables in the Deployments pane. Missing Secrets can cause your app to fail during initialization with errors about undefined values.
+​
+Your Replit App exceeds the size limit
+Reserved VM and Autoscale Deployments support Replit Apps up to 8 GB. Static Deployments support up to 1 GB. To reduce your app’s size, delete unnecessary files or use an external datastore like SQL Database.
+​
+Your homepage takes too long to load
+Before marking your published app as live, a health check sends an HTTP request to your app. If your homepage takes more than five seconds to respond, the health check times out and publishing fails at the final step.
+​
+Your port configuration is incorrect
+If you have ports specified in your .replit config, automatic port detection is disabled. You must specify a port with externalPort set to 80 for the promotion step to pass. Verify your server listens on the specified localPort.
+​
+Your static deployment isn’t working
+This issue typically occurs when you specify an incorrect public directory or when your app isn’t suited for Static Deployments. A Static Deployment serves static files such as HTML, CSS, and JavaScript. If your app includes any server-side behavior, it isn’t a good candidate for Static Deployments. Change the deployment type to Autoscale in the Deployments pane instead.

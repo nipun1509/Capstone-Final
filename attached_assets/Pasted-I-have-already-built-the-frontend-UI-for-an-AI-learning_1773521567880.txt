@@ -1,0 +1,267 @@
+I have already built the frontend UI for an AI learning platform called EmoLearn. The chat interface already exists and sends user messages.
+
+Your task is to create the backend system that powers the chat so that it:
+
+1. Detects the student's emotion from the message
+2. Builds a structured tutor prompt
+3. Sends the prompt to Google Gemini API
+4. Returns the AI response to the frontend
+5. Also returns the detected emotion
+
+The system should run locally and expose an API that my React frontend can call.
+
+Use the following stack:
+
+Node.js
+Express
+Gemini API
+dotenv
+cors
+
+---------------------------------
+
+PROJECT STRUCTURE
+
+Create this backend structure:
+
+backend/
+  server.js
+  emotion.js
+  promptBuilder.js
+  gemini.js
+  .env
+
+---------------------------------
+
+INSTALL REQUIRED PACKAGES
+
+Install these packages:
+
+express
+cors
+dotenv
+@google/generative-ai
+
+---------------------------------
+
+ENVIRONMENT VARIABLES
+
+Create a .env file with:
+
+GEMINI_API_KEY=YOUR_API_KEY
+
+The API key will come from Google AI Studio.
+
+---------------------------------
+
+EMOTION DETECTION MODULE
+
+Create emotion.js.
+
+Implement function:
+
+detectEmotion(message)
+
+Emotion rules:
+
+If message contains any of these words:
+
+hard
+difficult
+stuck
+frustrated
+can't understand
+too complicated
+
+Return:
+frustrated
+
+If message contains:
+
+confused
+not clear
+unclear
+don't get
+what does this mean
+
+Return:
+confused
+
+If message contains:
+
+easy
+got it
+understand now
+makes sense
+
+Return:
+motivated
+
+Otherwise return:
+
+neutral
+
+---------------------------------
+
+PROMPT BUILDER
+
+Create promptBuilder.js.
+
+Function:
+
+buildPrompt(message, emotion)
+
+System prompt:
+
+You are EmoLearn AI Tutor.
+
+Your goal is to help students learn concepts clearly.
+
+You must adapt your teaching style depending on the student's emotional state.
+
+Emotion behavior rules:
+
+frustrated:
+simplify explanations
+encourage the student
+break problems into smaller steps
+
+confused:
+clarify the concept
+give examples
+explain step by step
+
+motivated:
+challenge the student
+give deeper explanation
+
+neutral:
+respond normally
+
+Always act like a supportive teacher.
+
+Append to the prompt:
+
+Student emotion: {emotion}
+Student question: {message}
+
+Return the final prompt string.
+
+---------------------------------
+
+GEMINI INTEGRATION
+
+Create gemini.js.
+
+Use:
+
+@google/generative-ai
+
+Model:
+
+gemini-1.5-flash
+
+Create function:
+
+generateResponse(prompt)
+
+Steps:
+
+Initialize Gemini using GEMINI_API_KEY
+
+Send prompt to the model
+
+Return the text response.
+
+---------------------------------
+
+EXPRESS SERVER
+
+Create server.js.
+
+Setup Express server with:
+
+express
+cors
+dotenv
+
+Server port:
+
+5000
+
+Create endpoint:
+
+POST /api/chat
+
+Request body example:
+
+{
+  "message": "This question is too hard"
+}
+
+Workflow:
+
+1. Receive user message
+2. Detect emotion using detectEmotion()
+3. Build tutor prompt using buildPrompt()
+4. Send prompt to Gemini using generateResponse()
+5. Return response JSON
+
+Response format:
+
+{
+  emotion: detectedEmotion,
+  reply: aiResponse
+}
+
+---------------------------------
+
+CORS
+
+Enable CORS so the React frontend can call the API.
+
+---------------------------------
+
+RUNNING THE SERVER
+
+Server should start with:
+
+node server.js
+
+Console log:
+
+Server running on port 5000
+
+---------------------------------
+
+FRONTEND INTEGRATION
+
+The React frontend will call:
+
+POST http://localhost:5000/api/chat
+
+with body:
+
+{
+ "message": userMessage
+}
+
+Return the AI response and emotion.
+
+---------------------------------
+
+GOAL
+
+The system should allow my chat learning interface to work like this:
+
+User types a question
+
+Emotion detection runs
+
+Emotion label is returned
+
+Prompt is built with teaching rules
+
+Gemini generates an answer
+
+Frontend displays the response in the chat UI

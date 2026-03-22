@@ -1,0 +1,144 @@
+Create a modern, visually stunning landing page for a project called "EmoLearn".
+
+EmoLearn is an AI-powered emotion-aware learning platform designed to improve digital education by detecting student emotions during learning and adapting the teaching style accordingly.
+
+Design Style:
+Use a dark futuristic design similar to the reference image with a glowing gradient arc at the bottom, smooth lighting effects, large bold typography, and a premium SaaS product aesthetic.
+
+Hero Section:
+Inside the main hero container show:
+
+Title:
+EmoLearn
+
+Subtitle:
+AI-Powered Emotion Aware Learning Platform
+
+Description:
+A smart learning system that understands student emotions such as frustration, confusion, and motivation, and adapts the teaching experience in real time through an intelligent chatbot tutor.
+
+Small indicator text:
+"AI Learning Assistant Active"
+
+Buttons:
+Start Learning
+Explore Platform
+
+The hero section should have strong visual focus with animated gradient lighting similar to the reference image.
+
+---
+
+Below the hero section create multiple scrollable sections to explain the entire project like a product showcase.
+
+Section: The Problem
+Explain briefly:
+Traditional learning platforms ignore student emotions, which causes frustration, loss of motivation, and poor engagement.
+
+Section: Our Solution
+Introduce EmoLearn as a platform that combines AI, Machine Learning, and emotion detection to create adaptive learning experiences.
+
+---
+
+Section: Key Features
+Show feature cards with icons.
+
+Emotion Detection
+Detects student emotions using NLP-based sentiment analysis.
+
+AI Learning Engine
+Adjusts explanations based on emotional state.
+
+Chatbot Tutor
+Interactive AI chatbot that guides students through learning.
+
+Adaptive Learning
+Difficulty and explanations change based on student responses.
+
+Progress Tracking
+Monitor learning progress and achievements.
+
+Personalized Learning
+Every student receives a customized learning experience.
+
+---
+
+Section: How EmoLearn Works
+Show a step flow diagram style UI.
+
+Student interacts with chatbot  
+Emotion detection model analyzes text  
+AI learning engine processes emotion  
+System adapts explanation  
+Student continues learning with better understanding
+
+---
+
+Section: Technology Stack
+Display technology icons or cards.
+
+Frontend
+React + Tailwind CSS
+
+Backend
+Node.js / Python API
+
+Machine Learning
+NLP based emotion detection model
+
+AI Interaction
+Chatbot based conversational interface
+
+---
+
+Section: Platform Preview
+Show UI mockup cards:
+
+Dashboard
+Course Interface
+Chat Learning Interface
+Emotion Detection Indicator
+Student Progress Analytics
+
+---
+
+Section: Why EmoLearn is Different
+Explain benefits:
+
+Emotion aware education
+Adaptive learning approach
+AI tutor available anytime
+Better engagement for students
+
+---
+
+Section: Project Vision
+Explain the future of the project:
+
+EmoLearn aims to make digital education more human-like by understanding student emotions and delivering personalized learning experiences.
+
+---
+
+Section: Team / Project Info
+Display a simple section introducing this as a capstone project and the development goal of building an intelligent learning assistant.
+
+---
+
+Footer
+Include links such as:
+
+Features
+Technology
+How it Works
+Contact
+
+Style Requirements:
+Use modern SaaS UI
+Smooth scroll animations
+Glassmorphism cards
+Soft glow gradients
+Large typography
+Animated hover effects
+Clean layout
+
+Goal:
+The landing page should feel like a professional AI product website while explaining the entire EmoLearn project clearly through scrollable sections.

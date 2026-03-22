@@ -1,0 +1,94 @@
+Create a modern AI learning chat interface page for a platform called "EmoLearn".
+
+EmoLearn is an AI-powered emotion-aware learning platform where students interact with an intelligent chatbot tutor that adapts explanations based on the student's emotions.
+
+Design Style:
+Use a dark futuristic UI with smooth gradients, soft lighting, and modern SaaS aesthetics. The interface should feel similar to AI tools like ChatGPT, Notion AI, or Claude with a clean and minimal layout.
+
+Page Layout:
+
+Left Sidebar:
+Include navigation with icons and labels:
+- Dashboard
+- Courses
+- Chat Learning (active)
+- Progress
+- Achievements
+- Settings
+- Logout
+
+Top Header:
+Display:
+Course name or topic (example: "Aptitude Practice")
+Small subtitle: "AI Tutor Session"
+User profile avatar on the right.
+
+Main Chat Interface:
+
+The center of the page should contain a large chat window where conversation between the student and AI tutor happens.
+
+Chat UI Features:
+- user message bubbles
+- AI tutor message bubbles
+- timestamps for messages
+- smooth message animations
+- scrollable chat history
+
+Example messages:
+
+User:
+"This question is too difficult."
+
+AI Tutor:
+"I see you might be feeling frustrated. Let's break the problem into smaller steps."
+
+Emotion Detection Indicator:
+
+Above the chat input show a small status indicator:
+
+Emotion Detected: Frustrated / Confused / Neutral / Motivated
+
+Use colored badges or icons to represent emotions.
+
+Chat Input Area:
+
+At the bottom include:
+
+- message input box
+- send button
+- optional microphone button for voice input
+- placeholder text: "Ask your AI tutor anything..."
+
+The input area should be sticky at the bottom like modern AI chat apps.
+
+Right Sidebar (Optional Insights Panel):
+
+Create a small panel displaying learning insights:
+
+Learning Progress
+Example: 45%
+
+Current Emotion Trend
+Example: Mostly Focused
+
+Session Duration
+Example: 12 minutes
+
+Quick Tips
+Example:
+"Take short breaks when frustration increases."
+
+Design Requirements:
+
+- dark theme
+- gradient highlights
+- glassmorphism cards
+- rounded chat bubbles
+- smooth animations
+- responsive layout
+- modern typography
+- subtle hover effects
+
+Goal:
+
+The page should feel like a professional AI tutoring platform where students chat with an intelligent assistant that understands emotions and helps them learn better.

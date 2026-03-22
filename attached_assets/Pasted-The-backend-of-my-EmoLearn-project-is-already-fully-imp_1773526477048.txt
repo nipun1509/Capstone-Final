@@ -1,0 +1,124 @@
+The backend of my EmoLearn project is already fully implemented and working.
+
+The only problem is that the Gemini API key has no quota. Everything else in the system works correctly.
+
+Your task is ONLY to replace the Gemini API integration with OpenRouter.
+
+Do not change anything else in the project.
+
+-------------------------------------
+
+CURRENT SYSTEM (DO NOT MODIFY)
+
+The backend already has:
+
+• Express server
+• endpoint POST /api/chat
+• emotion detection logic
+• prompt builder
+• response format
+• frontend connection
+
+This architecture must remain exactly the same.
+
+-------------------------------------
+
+WHAT YOU MUST CHANGE
+
+Replace the Gemini API call with an OpenRouter API call.
+
+Use the OpenRouter HTTP endpoint.
+
+API endpoint:
+
+https://openrouter.ai/api/v1/chat/completions
+
+-------------------------------------
+
+OPENROUTER API KEY
+
+Use this API key:
+
+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
+
+-------------------------------------
+
+MODEL
+
+Use this exact model:
+
+qwen/qwen3-next-80b-a3b-instruct:free
+
+Do not change the model automatically.
+
+-------------------------------------
+
+REQUEST FORMAT
+
+Send a POST request to OpenRouter with:
+
+Headers:
+
+Authorization: Bearer YOUR_OPENROUTER_API_KEY
+Content-Type: application/json
+
+Body:
+
+{
+  "model": "qwen/qwen3-next-80b-a3b-instruct:free",
+  "messages": [
+    {
+      "role": "system",
+      "content": systemPrompt
+    },
+    {
+      "role": "user",
+      "content": studentPrompt
+    }
+  ]
+}
+
+-------------------------------------
+
+PROMPTS
+
+Do not modify the existing prompt logic.
+
+The system prompt and student prompt are already generated in the backend.
+
+Use them exactly as they are.
+
+-------------------------------------
+
+RESPONSE HANDLING
+
+Extract the AI response from:
+
+response.choices[0].message.content
+
+Return it exactly the same way the Gemini response was returned before.
+
+-------------------------------------
+
+RETURN FORMAT (UNCHANGED)
+
+The API must still return:
+
+{
+  emotion: detectedEmotion,
+  reply: aiResponse
+}
+
+-------------------------------------
+
+IMPORTANT
+
+Do not change:
+
+• emotion detection logic
+• prompt builder
+• API routes
+• server structure
+• frontend connection
+
+Only replace the Gemini request with OpenRouter.

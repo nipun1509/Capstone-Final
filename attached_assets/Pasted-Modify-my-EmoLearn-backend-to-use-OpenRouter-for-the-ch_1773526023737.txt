@@ -1,0 +1,127 @@
+Modify my EmoLearn backend to use OpenRouter for the chatbot.
+
+IMPORTANT RULES:
+
+1. Do NOT use @openrouter/sdk.
+2. Use the OpenAI compatible API with the "openai" npm package.
+3. Do NOT change the model automatically.
+4. Always use this model only:
+
+qwen/qwen3-next-80b-a3b-instruct:free
+
+5. Use my OpenRouter API key:
+
+YOUR_OPENROUTER_API_KEY
+
+---------------------------------
+
+INSTALL REQUIRED PACKAGE
+
+npm install openai
+
+---------------------------------
+
+SERVER ARCHITECTURE
+
+Keep my existing backend structure.
+
+The endpoint must remain:
+
+POST /api/chat
+
+Request body:
+
+{
+ "message": "student question"
+}
+
+---------------------------------
+
+EMOTION DETECTION
+
+Use the existing detectEmotion(message) logic.
+
+Emotion rules:
+
+hard / difficult / stuck / can't understand → frustrated  
+confused / unclear / don't get → confused  
+easy / got it / makes sense → motivated  
+otherwise → neutral
+
+---------------------------------
+
+PROMPT BUILDER
+
+Create a system prompt:
+
+You are EmoLearn AI Tutor.
+
+Your goal is to help students learn concepts clearly.
+
+Adapt your explanation based on the student's emotional state.
+
+Emotion behavior rules:
+
+frustrated → simplify explanation and encourage
+confused → clarify concept with examples
+motivated → challenge the student slightly
+neutral → explain normally
+
+Always respond like a supportive teacher.
+
+Then append:
+
+Student emotion: {emotion}
+Student question: {message}
+
+---------------------------------
+
+OPENROUTER REQUEST
+
+Use the OpenAI library but point it to OpenRouter.
+
+Configuration:
+
+baseURL: https://openrouter.ai/api/v1
+
+Send request:
+
+model: "qwen/qwen3-next-80b-a3b-instruct:free"
+
+messages:
+
+[
+ { role: "system", content: systemPrompt },
+ { role: "user", content: studentPrompt }
+]
+
+---------------------------------
+
+RESPONSE FORMAT
+
+Return this JSON to the frontend:
+
+{
+ emotion: detectedEmotion,
+ reply: aiResponse
+}
+
+---------------------------------
+
+SERVER
+
+Server runs on port 5000.
+
+Enable CORS so the React frontend can call the API.
+
+---------------------------------
+
+GOAL
+
+When a user sends a message in the chat interface:
+
+1. Emotion is detected
+2. Prompt is built
+3. Request sent to OpenRouter
+4. AI tutor response returned
+5. Chat interface displays the response

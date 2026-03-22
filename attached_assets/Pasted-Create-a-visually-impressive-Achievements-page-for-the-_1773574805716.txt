@@ -1,0 +1,68 @@
+Create a visually impressive Achievements page for the EmoLearn platform.
+
+This page should feel like a gamified reward system for students, different from the other pages. Focus on creative design, animations, and an engaging experience.
+
+Main Concept:
+Students unlock achievements as they learn, complete lessons, stay consistent, and overcome difficult topics.
+
+Page Sections:
+
+1. Hero Achievement Banner
+At the top show a large animated banner with the title:
+"Your Learning Achievements"
+
+Include a glowing badge icon or trophy animation and a short message like:
+"Every step you take in learning unlocks new milestones."
+
+2. Achievement Badges Grid
+Display achievements as animated badge cards.
+
+Each badge should include:
+- Badge icon
+- Achievement title
+- Short description
+- Unlock status (locked / unlocked)
+
+Example achievements:
+- First Step – completed first lesson
+- Problem Solver – solved 10 problems
+- Consistency Master – studied 7 days in a row
+- Math Explorer – completed algebra course
+- AI Partner – used the AI tutor 20 times
+
+Unlocked badges should glow or animate slightly.
+
+Locked badges should appear dimmed.
+
+3. Progress Towards Next Achievement
+Show a progress card for upcoming achievements.
+
+Example:
+"Next Achievement: Consistency Master"
+Progress bar showing 4 / 7 days completed.
+
+4. Achievement Timeline
+Show a timeline of recently unlocked achievements.
+
+Example:
+- Completed Algebra Basics
+- First Chat with AI Tutor
+- Solved 5 Questions in a Row
+
+Add subtle scroll animations when items appear.
+
+5. Motivational AI Message
+Add a card where the AI tutor gives a motivational message such as:
+"You are making great progress! Keep learning to unlock your next achievement."
+
+Design Requirements:
+
+- Use modern glassmorphism cards
+- Add smooth hover effects
+- Add badge glow animations
+- Use subtle motion animations when elements appear on scroll
+- Maintain EmoLearn's dark futuristic design
+- Make the page responsive
+
+Goal:
+Make the Achievements page feel exciting and rewarding, like a gamified learning system that motivates students to keep studying.

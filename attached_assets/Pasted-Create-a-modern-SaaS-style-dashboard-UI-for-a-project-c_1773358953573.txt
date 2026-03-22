@@ -1,0 +1,113 @@
+Create a modern SaaS-style dashboard UI for a project called "EmoLearn".
+
+EmoLearn is an AI-powered emotion-aware learning platform that helps students learn through an intelligent chatbot tutor that adapts teaching based on student emotions.
+
+Design Style:
+Use a dark futuristic UI with gradient accents, smooth animations, rounded cards, and glassmorphism elements. The interface should feel like a premium AI product dashboard similar to modern SaaS platforms.
+
+Layout Structure:
+
+Top Navigation Bar:
+Include the EmoLearn logo on the left.
+On the right side include:
+- search bar
+- notification icon
+- user profile avatar.
+
+Left Sidebar Navigation:
+Create a vertical sidebar with icons and labels for:
+- Dashboard
+- Courses
+- Chat Learning
+- Progress
+- Achievements
+- Settings
+- Logout.
+
+Main Dashboard Content:
+
+Welcome Section:
+Display a large welcome card that says:
+"Welcome back to EmoLearn"
+Add a short subtitle:
+"Continue your emotion-aware learning journey."
+
+Include two buttons:
+- Start Chat Learning
+- Explore Courses.
+
+Quick Stats Section:
+Show four stat cards in a row displaying:
+
+Learning Progress
+Example: 40%
+
+Active Courses
+Example: 3 courses
+
+Learning Streak
+Example: 5 day streak
+
+Emotion Insights
+Example: Most detected emotion: Focused.
+
+Continue Learning Section:
+Display course cards showing currently active courses.
+
+Example cards:
+Placement Preparation
+Aptitude Practice
+Coding Interview Prep.
+
+Each card should include:
+- course title
+- progress bar
+- Continue Learning button.
+
+AI Tutor Section:
+Create a highlighted card introducing the AI Tutor Chat feature.
+
+Title:
+AI Tutor Chat
+
+Description:
+"Ask questions and receive emotion-aware explanations from your AI learning assistant."
+
+Include a large button:
+Start Chat Session.
+
+Emotion Analytics Section:
+Create a small widget showing emotional learning insights.
+
+Example display:
+Frustration: 20%
+Confusion: 15%
+Motivated: 65%.
+
+Use simple charts or bars.
+
+Achievements Section:
+Display learning badges such as:
+
+First Lesson Completed
+5 Day Learning Streak
+Course Explorer.
+
+Footer Section:
+Include links to:
+Features
+Technology
+Contact
+About.
+
+Design Requirements:
+- Dark theme
+- soft gradients
+- smooth hover animations
+- glassmorphism cards
+- rounded UI components
+- responsive layout
+- professional SaaS dashboard aesthetic.
+
+Goal:
+Create a visually impressive dashboard that represents an AI learning platform and allows users to easily access courses, chat with the AI tutor, track progress, and view emotional learning insights.
